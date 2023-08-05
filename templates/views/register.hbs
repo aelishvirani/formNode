@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{>header}}
+    <title>Register</title>
+</head>
+<body>
+    {{>nav}}
+    <div class="container">
+      <div>
+    {{#if errorMessage}}
+    <p class="error-message">{{errorMessage}}</p>
+    {{/if}}
+</div>
+<form action="/register" method="post">
+    <div class="row">
+  <div class="col">
+    <input type="text" class="form-control" placeholder="First name *" aria-label="First name" name="firstname">
+  </div>
+  <div class="col">
+    <input type="text" class="form-control" placeholder="Last name *" aria-label="Last name" name="lastname">
+  </div>
+</div>
+
+    <div class="row mt-4">
+  <div class="col">
+    <input type="email" class="form-control" placeholder="Your Email *" aria-label="Your Email" name="email">
+  </div>
+  <div class="col">
+    <div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="Male">
+  <label class="form-check-label" for="Male">Male</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="Female">
+  <label class="form-check-label" for="Female">Female</label>
+</div>
+  </div>
+</div>
+
+  <div class="row mt-4">
+  <div class="col">
+    <input type="text" class="form-control" placeholder="Your Phone *" aria-label="First name" name="phone">
+  </div>
+  <div class="col">
+    <input type="text" class="form-control" placeholder="Enter Youe age *" aria-label="Last name" name="age">
+  </div>
+</div>
+
+  <div class="row mt-4">
+  <div class="col">
+    <input type="password" class="form-control" placeholder="password *" aria-label="First name" name="password">
+  </div>
+  <div class="col">
+    <input type="password" class="form-control" placeholder="Confirm Password" aria-label="Last name" name="confirmpassword">
+  </div>
+</div>
+
+<div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+ 
+  <button class="btn btn-primary" type="submit" value="register">Submit</button>
+</div>
+</form>
+    </div>
+</body>
+</html>

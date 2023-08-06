@@ -8,6 +8,14 @@
 </head>
 <body>
     {{>nav}}
-    <h1>login page</h1>
+    <form action="/login" method="POST">
+     <div class="container">
+      <input type="email" class="form-control" placeholder="Your Email *" aria-label="Your Email" name="email">
+    <input type="password" class="form-control mt-3" placeholder="password *" aria-label="First name" name="password">
+  <button class="btn btn-primary mt-3" type="submit" value="register">Submit</button>
+    </div>
+    </form>
+   
+
 </body>
 </html>
